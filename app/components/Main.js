@@ -1,14 +1,16 @@
 import React from "react";
+import Nav from "./children/Nav";
 
 class Main extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
-				<h1> This is a Test </h1>
+			<div>
+				<Nav />
+				{this.props.children}
 			</div>
 		);
 	}
-};
+}
 
 export default Main;
