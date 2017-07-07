@@ -8,7 +8,7 @@ class Login extends React.Component {
   render() {
  
     return (
-      <div className="container">
+      <div className="container margin-adjustment">
      	<Link to="/task">Fake Login</Link>
       </div>
     );
