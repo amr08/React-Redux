@@ -48,7 +48,7 @@ Voila!
   - Attempted redux, had trouble with various docs/versions 
 
 ##### Thursday 7/6/17 - Changed gears
-  - Tackled that react-router/file issues
+  - Tackled the react-router/file issues
   - Posting and getting from Zendesk API!
   - Removed old styling and added Auth0 Bootstrap
 
