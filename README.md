@@ -43,9 +43,9 @@ Voila!
   - Created Basic React App running on server
 
 ##### Wednesday 7/5/17 - Tough day at the office
-  - Fought with react-router for far too long. 
+  - Fought with react-router for far too long
   - Was able to trigger Auth0, but was unable to incorporate it without webpack/babel drama. Marked it all out!
-  - Attempted redux, had trouble with various docs/versions.  
+  - Attempted redux, had trouble with various docs/versions 
 
 ##### Thursday 7/6/17 - Changed gears
   - Tackled that react-router/file issues
