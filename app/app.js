@@ -1,9 +1,24 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Router, browserHistory } from "react-router";
+import { render } from "react-dom";
+// import { browserHistory } from 'react-router';
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from "redux";
+// import Auth from './Auth/Auth.js';
 import routes from "./routes";
 
-ReactDOM.render(<Router history={browserHistory} routes={routes} />, document.getElementById("app"));
+// const auth = new Auth();
+// auth.login();
+
+const store = createStore(
+	(state = {}) => state,
+	applyMiddleware(thunk)
+);
+
+render(
+	<Provider store={store}>
+	 {routes}
+	 </Provider>, document.getElementById("app"));
 
 // import { createStore } from "redux";
 

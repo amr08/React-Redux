@@ -8,7 +8,8 @@ class Nav extends React.Component {
 			    <div className="nav-wrapper">
 			      	<Link to="/" className="brand-logo">Logo</Link>
 			      	<ul id="nav-mobile" className="right hide-on-med-and-down">
-				        <li><Link to="/signup">Signup</Link></li>
+				        <li><Link to="/ticket">Create Ticket</Link></li>
+				        <li><Link to="/display">Current Tickets</Link></li>
 			      	</ul>
 			    </div>
 			</nav>
@@ -18,6 +19,7 @@ class Nav extends React.Component {
 };
 
 export default Nav;
+
 
 
 
