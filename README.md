@@ -22,7 +22,7 @@ To start server:
 
     $ node server.js
 
-Open web browser and type ```localhost:8080```
+Open web browser and type ```localhost:3000```
 
 Voila! 
 

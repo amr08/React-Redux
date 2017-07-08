@@ -4,8 +4,8 @@ class DisplayTicket extends React.Component {
 
 	render() {
 		return (
-			<div className="container">
-				<h4> Hit enter in browser</h4>
+			<div className="container card-docs unique-container">
+				<h1> Hit enter in browser</h1>
             </div>
 		);
 	}

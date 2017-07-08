@@ -1,6 +1,6 @@
 module.exports = {
 
-  entry: "./app/app.js",
+  entry: "./src/index.js",
 
   output: {
     filename: "public/bundle.js"
@@ -11,11 +11,18 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/, 
-        include: /app/,
+        include: /src/,
         loader: "babel-loader",
         query: {
           presets: ["es2015", "react","stage-0"]
         }
+      },
+      { 
+        test: /\.css$/, 
+        loader: "style-loader!css-loader" 
+      },
+      { test: /\.svg$/, 
+        loader: 'svg-loader?pngScale=2'
       }
     ]
   },

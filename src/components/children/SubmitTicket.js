@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import helper from "../utils/helpers";
 
 class SubmitTicket extends React.Component {
@@ -9,8 +9,8 @@ class SubmitTicket extends React.Component {
 			subject: "",
 			body:""
 		}
-		this.onChange = this.onChange.bind(this);
-		this.onSubmit = this.onSubmit.bind(this);
+		this.onChange=this.onChange.bind(this);
+		this.onSubmit=this.onSubmit.bind(this);
 	}
 
 	onChange(event) {
@@ -19,18 +19,21 @@ class SubmitTicket extends React.Component {
 
   	onSubmit(event) {
         event.preventDefault();
-       helper.userTicketSubmission(this.state);
-        // console.log(userSubmission);
+        helper.userTicketSubmission(this.state);
+        this.setState({subject: "", body: ""});
+
         // console.log(this.state);
         // this.props.helper.userTicketSubmission(this.state);
   	}
 
 	render() {
 		return (
+        <div className="container card-docs unique-container">
+
             <form className="form-horizontal col-xs-10 col-xs-offset-1  margin-adjustment" onSubmit={this.onSubmit}>
                         <div className="form-group">
-                            <label className="col-xs-3 control-label">Subject</label>
-                            <div className="col-xs-9">
+                            <label className="col-xs-1 control-label">Subject</label>
+                            <div className="col-xs-11">
                                 <input 
                                     className="form-control" 
                                     value={this.state.subject}
@@ -42,9 +45,9 @@ class SubmitTicket extends React.Component {
                             </div>
                         </div>
                         <div className="form-group">
-                            <label className="col-xs-3 control-label">Issue</label>
-                            <div className="col-xs-9">
-                                <input 
+                            <label className="col-xs-1 control-label">Issue</label>
+                            <div className="col-xs-11">
+                                <textarea 
                                     className="form-control" 
                                     value={this.state.body}
                                     name="body"
@@ -53,9 +56,11 @@ class SubmitTicket extends React.Component {
                                     placeholder="Please list details" 
                                     required />
                             </div>
-                        </div>
+                        </div> 
                         <button className="btn btn-primary btn-md" type="submit" value="Submit" name="action">Submit</button>
                     </form>
+                    
+                </div>
 
 		);
 	}
