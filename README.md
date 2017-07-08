@@ -52,8 +52,13 @@ Voila!
   - Posting and getting from Zendesk API!
   - Removed old styling and added Auth0 Bootstrap
 
-##### Task up next:
+##### Friday 7/7/17 - Functional app!
 
-  -Incorporate Redux 
+  - Moved app & server over to create-react-app a was able to get auth0 to work!
+
+##### Saturday 7/8/17 - Preparing for the home stretch
+
+  - Last step is to incorporate Redux. Luckily I saved myself plenty of time to tackle errors and challenges ahead. 
+  - Today I spent time getting a clean workspace ready to go and opened all docs that I will need for the remaining days.
 
 
