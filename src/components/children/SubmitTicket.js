@@ -21,8 +21,6 @@ class SubmitTicket extends React.Component {
         event.preventDefault();
         helper.userTicketSubmission(this.state);
         this.setState({subject: "", body: ""});
-
-        // console.log(this.state);
         // this.props.helper.userTicketSubmission(this.state);
   	}
 
@@ -59,7 +57,6 @@ class SubmitTicket extends React.Component {
                         </div> 
                         <button className="btn btn-primary btn-md" type="submit" value="Submit" name="action">Submit</button>
                     </form>
-                    
                 </div>
 
 		);

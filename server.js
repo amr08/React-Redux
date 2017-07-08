@@ -53,9 +53,10 @@ app.post("/home/submit", function(req,res) {
 });
 
 //Display tickets
-app.get("/home/display", function(req,res) {
+app.get("/api", function(req,res) {
    zendesk.tickets.list().then(function(tickets){
     res.send(tickets);
+    // return tickets;
     console.log(tickets);
   });
 })

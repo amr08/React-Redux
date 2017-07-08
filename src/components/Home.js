@@ -20,17 +20,14 @@ class Home extends Component {
                 </article>
               </div>
 
-            <div className="col-xs-12 col-md-6">
-              <article className="card-docs"><i className="card-docs-icon icon-budicon-342 green"></i>
-                <h2 className="card-docs-title">Current Tickets</h2>
-                <p className="card-docs-description">View current Zendesk Tickets</p>
-                <Link to="/home/display" className="btn btn-default">See Tickets</Link>
-              </article>
+              <div className="col-xs-12 col-md-6">
+                <article className="card-docs"><i className="card-docs-icon icon-budicon-342 green"></i>
+                  <h2 className="card-docs-title">Current Tickets</h2>
+                  <p className="card-docs-description">View current Zendesk Tickets</p>
+                  <Link to="/home/display" className="btn btn-default">See Tickets</Link>
+                </article>
+              </div>
             </div>
-
-           
-          </div>
-
             )
         }
         {
