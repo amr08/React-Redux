@@ -1,4 +1,4 @@
-# Ticket Tracker
+# Zenhub Ticket Portal
 
 ------
 
@@ -8,9 +8,11 @@
 
 This application uses Node.js, NPM, & Webpack
 
-### Installing and Running
+### Installing and Running Locally
 
-To install package.json:
+Set up accounts and tokens with Zenhub & Auth0
+
+then install package.json:
 
     $ npm install
 
@@ -18,7 +20,7 @@ Compile JS
 	
 	$ webpack
 
-To start server:
+Start server:
 
     $ node server.js
 
