@@ -17,17 +17,17 @@ const handleAuthentication = (nextState, replace) => {
 
 export const makeMainRoutes = () => {
   return (
-      <BrowserRouter history={history} component={App}>
-        <div>
-          <Route path="/" render={(props) => <App auth={auth} {...props} />} />
-          <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
-          <Route path="/home/submit" render={(props) => <SubmitTicket auth={auth} {...props} />} />
-          <Route path="/home/display" render={(props) => <DisplayTicket auth={auth} {...props} />} />
-          <Route path="/callback" render={(props) => {
-            handleAuthentication(props);
-            return <Home {...props} /> 
-          }}/>
-        </div>
-      </BrowserRouter>
+    <BrowserRouter history={history} component={App}>
+      <div>
+        <Route path="/" render={(props) => <App auth={auth} {...props} />} />
+        <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
+        <Route path="/home/submit" render={(props) => <SubmitTicket auth={auth} {...props} />} />
+        <Route path="/home/display" render={(props) => <DisplayTicket auth={auth} {...props} />} />
+        <Route path="/callback" render={(props) => {
+          handleAuthentication(props);
+          return <Home {...props} /> 
+        }}/>
+      </div>
+    </BrowserRouter>
   );
 }

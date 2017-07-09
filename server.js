@@ -34,6 +34,7 @@ app.get("/home", function(req, res){
 //   app.get("/", function(req, res){
 //      res.sendFile(path.resolve(__dirname, "public", "index.html"));
 //   });
+
 //bring in global css/js/html
 app.use(express.static(__dirname + "/public"))
 
@@ -48,7 +49,7 @@ app.post("/home/submit", function(req,res) {
   }
   }).then(function(result){
     console.log(result)
-      result == true 
+    result == true 
   })  
 });
 
@@ -62,6 +63,6 @@ app.get("/api", function(req,res) {
 })
 
 //Port Listener
-  app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
-  });
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
