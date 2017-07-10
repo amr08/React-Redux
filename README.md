@@ -63,4 +63,11 @@ Voila!
   - Last step is to incorporate Redux. Luckily I saved myself plenty of time to tackle errors and challenges ahead. 
   - Today I spent time getting a clean workspace ready to go and opened all docs that I will need for the remaining days.
 
+##### Sunday 7/9/17 - Redux Success!
+
+  - I was able to send ticket submissions by utilizing redux
+  - UI updates to enhance experience
+
+Last step: Utilize redux on the diplay ticket page
+
 
