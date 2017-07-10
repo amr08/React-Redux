@@ -39,10 +39,17 @@ class SubmitTicket extends React.Component {
     addSuccessAlert.className = "alert alert-success";
   }
 
+  login() {
+    this.props.auth.login();
+  }
+
   render() {
+    const { isAuthenticated } = this.props.auth;
     return (
 
-        <div className="container card-docs unique-container">
+      <div>
+        { isAuthenticated() && (
+          <div className="container card-docs unique-container">
           <form className="form-horizontal col-xs-10 col-xs-offset-1  margin-adjustment" onSubmit={this.onSubmit}>
             <div className="form-group">
               <label className="col-xs-2 control-label">Subject</label>
@@ -73,8 +80,10 @@ class SubmitTicket extends React.Component {
             <button className="btn btn-primary btn-md" type="submit" value="Submit" name="action">Submit</button>
             <div id="alert"></div>
           </form>
-        </div>
-   
+          </div>
+          )
+        }
+      </div>
     );
   }
 }
@@ -84,10 +93,5 @@ function mapStateToProps(state) {
     tickets: state
   }
 }
-
-// function mapDispatchToProps(dispatch){
-//   return bindActionCreators({getTickets}, dispatch);
-// }
-
 
 export default connect(mapStateToProps, { submitTickets }) (SubmitTicket);

@@ -1,6 +1,6 @@
- import React from "react";
- import {connect } from "react-redux";
- import { getTickets } from "../../actions";
+import React from "react";
+import {connect } from "react-redux";
+import { getTickets } from "../../actions";
 
 class DisplayTicket extends React.Component {
   constructor(props){
@@ -9,8 +9,8 @@ class DisplayTicket extends React.Component {
   }
 
   componentWillReceiveProps(NextProps) {
-    console.log('componentWillReceiveProps', NextProps);
-    this.currentTickets = NextProps.tickets[0].text
+    const length = NextProps.tickets.length;
+    this.currentTickets = NextProps.tickets[length-1].text
   }
 
   render(){
@@ -24,7 +24,7 @@ class DisplayTicket extends React.Component {
         </thead>
         <tbody>
           {this.currentTickets.map(ticket => 
-            <tr>
+            <tr key={ticket.id}>
               <td className="text-truncate" title="">{ticket.subject}</td>
               <td>{ticket.description}</td>
             </tr>

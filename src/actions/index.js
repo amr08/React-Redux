@@ -14,6 +14,5 @@ export const getTickets = (text) => {
     type: GET_TICKETS,
     text
   }
-  console.log("getting tickets from action", action);
   return action;
 }

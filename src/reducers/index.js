@@ -19,11 +19,9 @@ const tickets = (state = [], action) => {
   switch(action.type){
     case SUBMIT_TICKETS:
       tickets = [...state, ticket(action)];
-      console.log("tickets as state", tickets)
       return tickets;
     case GET_TICKETS:
       tickets = [...state, currentTickets(action)];
-      console.log("currentTickets in reducer", tickets)
       return tickets
     default:
   return state;

@@ -4,13 +4,11 @@ const express = require("express");
 const dotenv = require("dotenv").config();
 const bodyParser = require("body-parser");
 const path = require("path");
-// const logger = require("morgan");
 const Zendesk = require('zendesk-node-api');
 
 let app = express();
 const PORT = process.env.PORT || 3000;
 
-// app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.text());
@@ -22,6 +20,14 @@ const zendesk = new Zendesk({
   token: process.env.ZENDESK_API_TOKEN 
 });
 
+//bring in global css/js/html
+app.use(express.static(__dirname + "/public"))
+
+// // //Landing
+app.get("/", function(req, res){
+  res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
+
 app.get("/callback", function(req, res){
   res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
@@ -30,13 +36,14 @@ app.get("/home", function(req, res){
   res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
-// // //Landing
-//   app.get("/", function(req, res){
-//      res.sendFile(path.resolve(__dirname, "public", "index.html"));
-//   });
+app.get("/home/submit", function(req, res){
+  res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
 
-//bring in global css/js/html
-app.use(express.static(__dirname + "/public"))
+app.get("/home/display", function(req, res){
+  res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
+
 
 //Post Ticket to Zendesk
 app.post("/home/submit", function(req,res) {
@@ -48,6 +55,7 @@ app.post("/home/submit", function(req,res) {
     body: req.body.body 
   }
   }).then(function(result){
+    console.log(result);
     console.log("Ticket Created");
     result == true 
   })  

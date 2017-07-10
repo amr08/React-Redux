@@ -4,7 +4,6 @@ import {connect } from "react-redux";
 import DisplayTicket from "./DisplayTicket";
 import { getTickets } from "../../actions";
 
-
 class TicketCall extends React.Component {
   constructor(props){
     super(props);
@@ -20,11 +19,22 @@ class TicketCall extends React.Component {
       this.props.getTickets(tickets);
     });
   }
+
+  login() {
+    this.props.auth.login();
+  }
  
   render() {
+    const { isAuthenticated } = this.props.auth;
     return (
-      <div className="container card-docs unique-container">
-       <DisplayTicket /> 
+      <div>
+      {
+        isAuthenticated() && (
+          <div className="container card-docs unique-container">
+            <DisplayTicket /> 
+          </div>
+        )
+      }
       </div>
     );
   }
