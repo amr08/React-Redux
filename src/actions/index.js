@@ -5,7 +5,6 @@ export const submitTickets = (text) => {
     type: SUBMIT_TICKETS,
     text
   }
-  console.log("action in getTicket", action);
   return action;
 }
 
