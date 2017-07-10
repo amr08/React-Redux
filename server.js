@@ -3,6 +3,7 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const bodyParser = require("body-parser");
+const logger = require("morgan");
 const path = require("path");
 const Zendesk = require('zendesk-node-api');
 
@@ -10,6 +11,7 @@ let app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.text());
@@ -21,13 +23,14 @@ const zendesk = new Zendesk({
   token: process.env.ZENDESK_API_TOKEN 
 });
 
-//bring in global css/js/html
-app.use(express.static(__dirname + "/public"))
-
 // // //Landing
 app.get("/", function(req, res){
   res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
+
+//bring in global css/js/html
+app.use(express.static(__dirname + "/public"))
+
 
 app.get("/callback", function(req, res){
   res.sendFile(path.resolve(__dirname, "public", "index.html"));
@@ -51,8 +54,8 @@ app.post("/home/submit", function(req,res) {
   console.log(req.body.subject)
 
   zendesk.tickets.create({
-  subject: req.body.subject, 
-  comment: { 
+    subject: req.body.subject, 
+    comment: { 
     body: req.body.body 
   }
   }).then(function(result){
