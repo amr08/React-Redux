@@ -33,6 +33,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom"
   }
 }
