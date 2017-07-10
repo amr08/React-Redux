@@ -1,18 +1,12 @@
 import axios from "axios";
 
-const helper = { 
+export function userTicketSubmission(userData){
+  //Sending Ticket to Zenhub from Redux Store
+  const userTicketData = userData.tickets[0].text;
+    return axios.post("/home/submit", userTicketData);
+}
 
-  userTicketSubmission: function(userData){
-    console.log(userData);
-    return axios.post("/home/submit", userData);
-  // return dispatch => {
-  //  return axios.post("/submit", userData);
-  //  }
-  },
-
-  getTickets: function() {
+export function getTickets(){
     return axios.get("/api");
-  }
-};
+}
 
-export default helper;

@@ -48,7 +48,7 @@ app.post("/home/submit", function(req,res) {
     body: req.body.body 
   }
   }).then(function(result){
-    console.log(result)
+    console.log("Ticket Created");
     result == true 
   })  
 });

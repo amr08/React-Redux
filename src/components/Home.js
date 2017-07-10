@@ -8,6 +8,8 @@ class Home extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
+
+      <div>
       <div className="container">
         {
           isAuthenticated() && (
@@ -16,7 +18,7 @@ class Home extends Component {
                 <article className="card-docs"><i className="card-docs-icon icon-budicon-499 orange"></i>
                   <h2 className="card-docs-title">New Zendesk Ticket</h2>
                   <p className="card-docs-description">Create a new ticket on ZenDesk</p>
-                  <Link to="/home/submit" className="btn btn-default">Create Ticket</Link>
+                  <div className="button-padding"><Link to="/home/submit" className="btn btn-default">Create Ticket</Link></div>
                 </article>
               </div>
 
@@ -24,13 +26,17 @@ class Home extends Component {
                 <article className="card-docs"><i className="card-docs-icon icon-budicon-342 green"></i>
                   <h2 className="card-docs-title">Current Tickets</h2>
                   <p className="card-docs-description">View current Zendesk Tickets</p>
-                  <Link to="/home/display" className="btn btn-default">See Tickets</Link>
+                  <div className="button-padding"><Link to="/home/display" className="btn btn-default">See Tickets</Link></div>
                 </article>
               </div>
             </div>
           )
         }
       </div>
+      <div className="container">
+        {this.props.children}
+      </div>
+    </div>
     );
   }
 }
