@@ -8,7 +8,6 @@ coverage
 
 # production
 build
-public/bundle.js
 src/Auth/auth0-variables.js
 
 # misc
