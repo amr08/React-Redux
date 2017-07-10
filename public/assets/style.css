@@ -1,12 +1,15 @@
+/*on all top containers*/
 .margin-adjustment {
     margin-top: 50px;
     margin-bottom: 4%;
 }
 
+/*testing class*/
 .box {
     border: 2px solid black;
 }
 
+/*for the cards*/
 .unique-container {
     max-width: 80%;
     margin-bottom: 10%;
@@ -14,15 +17,20 @@
     margin-left: 12%;
 }
 
+.button-padding {
+    margin-bottom: 25px;
+}
+
+/*in ticketsubmit*/
 textarea {
     max-width: 100%;
     max-height: 200px;
 }
 
+/*user feedback after submit*/
 #alert {
+    margin: 0 auto;
     margin-top: 20px;
+    width: 50%;
 }
 
-.button-padding {
-    margin-bottom: 25px;
-}

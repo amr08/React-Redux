@@ -30,7 +30,7 @@ app.get("/home", function(req, res){
   res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
-// //Landing
+// // //Landing
 //   app.get("/", function(req, res){
 //      res.sendFile(path.resolve(__dirname, "public", "index.html"));
 //   });
@@ -57,8 +57,7 @@ app.post("/home/submit", function(req,res) {
 app.get("/api", function(req,res) {
    zendesk.tickets.list().then(function(tickets){
     res.send(tickets);
-    // return tickets;
-    console.log(tickets);
+    console.log("Tickets obtained from API");
   });
 })
 

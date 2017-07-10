@@ -1,8 +1,6 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { userTicketSubmission } from "../utils/helpers";
-// import { bindActionCreators } from "redux";
 import { submitTickets } from "../../actions";
 
 

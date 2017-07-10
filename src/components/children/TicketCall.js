@@ -1,8 +1,8 @@
 import React from "react";
-import { getTickets } from "../utils/helpers";
+import { getTicketsFromApi } from "../utils/helpers";
 import {connect } from "react-redux";
-import { PropTypes } from "prop-types";
 import DisplayTicket from "./DisplayTicket";
+import { getTickets } from "../../actions";
 
 
 class TicketCall extends React.Component {
@@ -14,30 +14,26 @@ class TicketCall extends React.Component {
   }
 
   componentDidMount() {
-    getTickets().then(response => {
+    getTicketsFromApi().then(response => {
       const tickets = response.data;
       this.setState({tickets});
+      this.props.getTickets(tickets);
     });
   }
-
+ 
   render() {
     return (
       <div className="container card-docs unique-container">
-        <DisplayTicket tickets={this.state.tickets} /> 
+       <DisplayTicket /> 
       </div>
     );
   }
 }
 
-// DisplayTicket.propTypes = {
-//   tickets: React.PropTypes.array.isRequired
-// }
+function mapStateToProps(state) {
+  return {
+    tickets: state
+  }
+}
 
-// function mapStateToProps(state) {
-//   return {
-//     tickets: state.tickets
-//   }
-// }
-
-export default TicketCall;
-// connect(mapStateToProps)(DisplayTicket);
+export default connect(mapStateToProps, { getTickets })(TicketCall);
