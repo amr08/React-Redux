@@ -81,7 +81,7 @@ Voila!
 
 ### Summary of accomplishments
 
-- Created an SPA with React/Node/Express/Redux
+- Created an SPA with React/Node/Express/Redux utilzing the Zendesk API
 - Utilized the global store instead of passing state between components
 - Secured all routes
 - Designed a simple UI that is user friendly
