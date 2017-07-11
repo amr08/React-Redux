@@ -6,24 +6,6 @@
 
 - A user should be able to add a ticket to Zendesk through the SPA.  Use Auth0 for user authentication, react/redux, and a server for submitting and receiving info.
 
-### Summary of accomplishments
-
-- Created an SPA with React/Node/Express/Redux
-- Utilized the global store instead of passing state between components
-- Secured all routes
-- Designed a simple UI that is user friendly
-- Bonus: I've gotten really good at submitting tickets
-
-### Next steps for Production 
-
-- Further testing: There appears to be a bug where a ticket is sometimes duplicated, however, it's not easy to replicate this bug so I could not identify the source.
-- Refactor rendering of global store data with best practices - I had to take my best guess at times! 
-- Web Designer to review and give suggestions on how to improve UI
-
-
-Thanks to the Auth0 team for the opportunity to create this app and for steering me in the right direction!
-
-
 
 ## Getting Started
 
@@ -97,6 +79,21 @@ Voila!
   - After some expected slow downs with deployment due to that fiesty bundle.js and forgetting to add config vars to heroku, the app is deployed and live here! [https://zendeskreactredux](https://zendeskreactredux.herokuapp.com)
 
 
+### Summary of accomplishments
 
+- Created an SPA with React/Node/Express/Redux
+- Utilized the global store instead of passing state between components
+- Secured all routes
+- Designed a simple UI that is user friendly
+- Bonus: I've gotten really good at submitting tickets
+
+### Next steps for Production 
+
+- Further testing: There appears to be a bug where a ticket is sometimes duplicated, however, it's not easy to replicate this bug so I could not identify the source.
+- Refactor rendering of global store data with best practices - I had to take my best guess at times! 
+- Web Designer to review and give suggestions on how to improve UI
+
+
+Thanks to the Auth0 team for the opportunity to create this app and for steering me in the right direction!
 
 
