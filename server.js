@@ -18,7 +18,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 //bring in global css/js/html
 app.use(express.static(__dirname + "/public"))
 
-var routes = require('./controllers/page_controller.js');
+const routes = require('./controllers/page_controller.js');
 app.use('/', routes);
 
 //Port Listener
