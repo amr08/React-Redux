@@ -79,7 +79,7 @@ Voila!
   - After some expected slow downs with deployment due to that fiesty bundle.js and forgetting to add config vars to heroku, the app is deployed and live here! [https://zendeskreactredux](https://zendeskreactredux.herokuapp.com)
 
 
-![](public/assets/zendeskgif2.gif)
+![](public/assets/zendeskgif3.gif)
 
 ### Summary of accomplishments
 
