@@ -23,14 +23,6 @@ router.get("/home", function(req, res){
   res.sendFile(path.resolve(__dirname, "../public", "index.html"));
 });
 
-router.get("/home/submit", function(req, res){
-  res.sendFile(path.resolve(__dirname, "../public", "index.html"));
-});
-
-router.get("/home/display", function(req, res){
-  res.sendFile(path.resolve(__dirname, "../public", "index.html"));
-});
-
 //Post Ticket to Zendesk
 router.post("/home/submit", function(req,res) {
   console.log(req.body.subject)
@@ -51,5 +43,12 @@ router.get("/api", function(req,res) {
     res.send(tickets);
   });
 })
+
+
+router.get("/*", function(req, res){
+  res.sendFile(path.resolve(__dirname, "../public", "index.html"));
+});
+
+
 
 module.exports = router;
