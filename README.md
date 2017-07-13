@@ -7,8 +7,6 @@
 - A user should be able to add a ticket to Zendesk through the SPA.  Use Auth0 for user authentication, react/redux, and a server for submitting and receiving info.
 
 
-![](public/assets/zendeskgif2.gif)
-
 ## Getting Started
 
 ### Prerequisites
@@ -80,6 +78,8 @@ Voila!
   - I was up quite early excited about finishing the app today. I was able to send data to store in one compoenent and render to html in another.  Technically, since it was a child component, it would have been easier just pass down state to props, but I wanted to demonstrate utilizing props from the global redux store.
   - After some expected slow downs with deployment due to that fiesty bundle.js and forgetting to add config vars to heroku, the app is deployed and live here! [https://zendeskreactredux](https://zendeskreactredux.herokuapp.com)
 
+
+![](public/assets/zendeskgif2.gif)
 
 ### Summary of accomplishments
 
