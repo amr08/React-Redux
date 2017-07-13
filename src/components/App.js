@@ -28,7 +28,7 @@ class App extends Component {
               </div>
               <div className="collapse navbar-collapse" id="navbar-collapse">
                 <ul className="nav navbar-nav navbar-left no-basic">
-                  <li className="li-why"><a href="/home">Auth0 - Zenhub Ticket Portal</a>
+                  <li className="li-why"><a href="/home">Auth0 - Zendesk Ticket Portal</a>
                   </li>
                 </ul>
                 <ul className="nav navbar-nav navbar-right">

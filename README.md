@@ -1,4 +1,4 @@
-# Zenhub Ticket Portal
+# Zendesk Ticket Portal
 
 ------
 
@@ -15,7 +15,7 @@ This application uses Node.js, NPM, & Webpack
 
 ### Installing and Running Locally
 
-Set up accounts and tokens with Zenhub & Auth0
+Set up accounts and tokens with Zendesk & Auth0
 
 then install package.json:
 
