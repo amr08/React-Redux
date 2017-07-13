@@ -7,7 +7,7 @@
 - A user should be able to add a ticket to Zendesk through the SPA.  Use Auth0 for user authentication, react/redux, and a server for submitting and receiving info.
 
 
-![](public/assets/zendeskgif.mp4)
+![](public/assets/zendeskgif2.gif)
 
 ## Getting Started
 
